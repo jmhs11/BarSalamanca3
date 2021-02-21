@@ -8,6 +8,7 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	scroll-behavior: smooth !important;
 }
 
 /** Globales **/
@@ -45,6 +46,14 @@ img {
 
 /** Utilidades **/
 
+.anchor-fix{
+	border-top: 70px solid transparent;
+    margin-top: -70px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
 .light-font {
 	font-weight: 300;
 }
@@ -78,6 +87,8 @@ img {
 	top: 0;
 	left: 0;
 	width: 100%;
+	box-shadow: 0 4px 6px -6px #222;
+	z-index: 99;
 }
 
 #header .barra .container {
@@ -132,7 +143,6 @@ body {
 }
 
 .row, .inverse-row{
-    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -146,6 +156,7 @@ body {
 
 .row .carta-texto{
     grid-column: 1 / 3;
+	margin: 0 3rem;
 }
 
 .row .carta-imagen{
@@ -154,52 +165,90 @@ body {
 
 .inverse-row .carta-texto{
     grid-column: 2 / 4;
+	margin: 0 3rem;
 }
 
 .inverse-row .carta-imagen{
     grid-column: 1 / 2;
 }
 
-.entrantes{
+.carta-contenido{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+	height: calc(100% - 89px);
+}
+
+.contenido-izq{
+	grid-column: 1 / 2;
+	height: 100%;
+	display: flex;
+    align-items: center;
+}
+
+.contenido-der{
+	grid-column: 2 / 3;
+	height: 100%;
+	display: flex;
+    align-items: center;
+}
+
+.entrantes .carta-imagen{
     background-image: url(../img/ensalada.jpg);
 }
 
-.tapas{
+.tapas .carta-imagen{
     background-image: url(../img/tapas.jpg);
 }
 
-.platos-combinados{
+.platos-combinados .carta-imagen{
     background-image: url(../img/plato-combinado.jpg);
 }
 
-.pescados{
+.pescados .carta-imagen{
     background-image: url(../img/pescado.jpg);
 }
 
-.tortillas{
-    background-image: url(../img/);
+.tortillas .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.hamburguesas{
-    background-image: url(../img/);
+.hamburguesas .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.llescas-calientes{
-    background-image: url(../img/);
+.llescas-calientes .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.llescas-frias{
-    background-image: url(../img/);
+.llescas-frias .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.sandwiches{
-    background-image: url(../img/);
+.sandwiches .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.bocadillos-calientes{
-    background-image: url(../img/);
+.bocadillos-calientes .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
 }
 
-.bocadillos-frios{
-    background-image: url(../img/);
+.bocadillos-frios .carta-imagen{
+    background-image: url(../img/plato-combinado.jpg);
+}
+
+.carta-list{
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	font-size: 1.4rem;
+}
+
+.pescados .carta-contenido, .sandwiches .carta-contenido, .tortillas .carta-contenido, .hamburguesas .carta-contenido{
+	display: inherit;
+}
+
+.carta-item{
+	display: flex;
+	justify-content: space-between;
 }
