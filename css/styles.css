@@ -1,11 +1,205 @@
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    /*1rem = 10px*/
+	box-sizing: border-box;
+	font-size: 62.5%;
+	/*1rem = 10px*/
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+/** Globales **/
+
+body {
+	font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.6rem;
+}
+
+.container {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 3.4rem;
+}
+
+h3 {
+	font-size: 2.8rem;
+}
+
+h4 {
+	font-size: 2.4rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+/** Utilidades **/
+
+.light-font {
+	font-weight: 300;
+}
+
+.regular-font{
+    font-weight: 400;
+}
+
+.bold-font {
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+/** Header **/
+#header {
+	background-image: url(../img/header.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+
+.barra {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#header .barra .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.barra,
+body {
+	background: url(../img/pattern.png) repeat;
+	color: darkred;
+}
+
+.logo h1 {
+	font-size: 2.8rem;
+}
+
+.nav {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+.headerInfo {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.headerInfo .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: inherit;
+	color: white;
+}
+
+/** Carta **/
+
+.carta{
+    height: 100vh;
+}
+
+.carta-header {
+	padding: 3rem;
+	box-shadow: 0 4px 6px -6px #222;
+}
+
+.row, .inverse-row{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.carta-texto, .carta-imagen{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.row .carta-texto{
+    grid-column: 1 / 3;
+}
+
+.row .carta-imagen{
+    grid-column: 3 / 4;
+}
+
+.inverse-row .carta-texto{
+    grid-column: 2 / 4;
+}
+
+.inverse-row .carta-imagen{
+    grid-column: 1 / 2;
+}
+
+.entrantes{
+    background-image: url(../img/ensalada.jpg);
+}
+
+.tapas{
+    background-image: url(../img/tapas.jpg);
+}
+
+.platos-combinados{
+    background-image: url(../img/plato-combinado.jpg);
+}
+
+.pescados{
+    background-image: url(../img/pescado.jpg);
+}
+
+.tortillas{
+    background-image: url(../img/);
+}
+
+.hamburguesas{
+    background-image: url(../img/);
+}
+
+.llescas-calientes{
+    background-image: url(../img/);
+}
+
+.llescas-frias{
+    background-image: url(../img/);
+}
+
+.sandwiches{
+    background-image: url(../img/);
+}
+
+.bocadillos-calientes{
+    background-image: url(../img/);
+}
+
+.bocadillos-frios{
+    background-image: url(../img/);
 }
